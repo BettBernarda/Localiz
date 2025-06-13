@@ -1,0 +1,332 @@
+/* ============================= */
+/* ESTILOS GERAIS */
+/* ============================= */
+
+body {
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+}
+
+/* ============================= */
+/* ESTILOS DE TABELA */
+/* ============================= */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* ============================= */
+/* CONTAINERS PRINCIPAIS */
+/* ============================= */
+
+.maxContainer {
+    flex-direction: column;
+}
+
+.actionContainer,
+.menuContainer,
+.tableContainer,
+.tableContainer2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.actionContainer {
+    height: 100vh;
+}
+
+.menuContainer,
+.tableContainer {
+    height: auto;
+    padding: 20px;
+}
+
+/* ============================= */
+/* CONTAINERS ESPECÍFICOS */
+/* ============================= */
+
+.actionWrapper {
+    background: #e0e5eb;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+}
+
+.menuWrapper {
+    background: #e0e5eb;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 800px;
+}
+
+
+.tableWrapper,
+.tableWrapper2 {
+    background: #e0e5eb;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 1000px;
+}
+.mainPop-up {
+    background: #00ff8035;
+    color:#000000;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 1000px;
+}
+
+
+.textBox {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.leftInfo {
+    flex: 1;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rightInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: right;
+
+}
+
+
+/* ============================= */
+/* FORMULÁRIOS */
+/* ============================= */
+
+.actionForm {
+    align-items: center;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.inputField {
+    padding: 12px;
+}
+
+.inputSubmit {
+    padding-top: 20px;
+}
+
+.inputSubmit button {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 12px;
+    border: 0px;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+    color: #ffffff;
+    background-color: #34aeff;
+}
+
+.inputSubmit input {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 12px;
+    border: 0px;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+/* ============================= */
+/* CONFIGURAÇÕES E ELEMENTOS DE NAVEGAÇÃO */
+/* ============================= */
+
+
+.table-scroll-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    max-width: 100%;
+}
+
+.config {
+    align-items: baseline;
+}
+
+.config button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.logo {
+    width: 80px;
+}
+
+.deleteIcon {
+    width: 20px;
+}
+
+.config img {
+    display: block;
+    width: 40px;
+    height: auto;
+}
+
+/* ============================= */
+/* VISIBILIDADE DE ELEMENTOS */
+/* ============================= */
+
+.action {
+    display: none;
+}
+
+.action.on {
+    display: block;
+}
+
+/* ============================= */
+/* RESPONSIVIDADE */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+
+    .table-scroll-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: auto;
+        align-items: flex-start;
+        max-width: 100%;
+    }
+
+    .actionContainer {
+        align-items: flex-start;
+        padding-top: 20px;
+    }
+
+    .actionWrapper {
+        height: auto;
+        min-height: 100vh;
+        padding: 40px 20px;
+    }
+
+    .menuWrapper {
+        height: auto;
+        min-height: 100vh;
+        padding: 40px 20px;
+    }
+
+    .menuContainer {
+        align-items: flex-start;
+        padding-top: 20px;
+
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .tableContainer {
+        align-items: flex-start;
+        padding-top: 20px;
+
+    }
+
+    .tableWrapper {
+        height: auto;
+        min-height: 100vh;
+        padding: 40px 20px;
+        width: 100%
+    }
+
+    .tableContainer2 {
+        align-items: flex-start;
+        padding-top: 20px;
+    }
+
+    .tableWrapper2 {
+        height: min-content;
+        min-height: 20vh;
+        padding: 40px 20px;
+    }
+
+
+    /* Ajuste de tabela em telas menores */
+    table {
+        width: 100%;
+    }
+
+    th,
+    td {
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Ajustes ainda mais significativos para telas muito pequenas */
+    .tableWrapper {
+        font-size: 12px;
+        /* Diminui ainda mais o tamanho da fonte */
+        padding: 30px 10px;
+    }
+
+    .table th,
+    .table td {
+        padding: 6px 10px;
+    }
+
+    .actionWrapper,
+    .menuWrapper {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .logo {
+        width: 80px;
+        /* Logo menor em telas muito pequenas */
+    }
+}

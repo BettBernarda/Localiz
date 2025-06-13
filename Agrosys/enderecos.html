@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário</title>
+
+    <link href="assets/css/style.css" rel="stylesheet">
+    <script src="assets/js/alasql.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/clientes.js"></script>
+    <script src="assets/js/enderecos.js"></script>
+
+
+</head>
+
+<body>
+
+    <div data-action="ClientInfo" class="action on">
+        <div class="maxContainer">
+            <div class="tableContainer2">
+                <div class="tableWrapper2">
+                    <h1 id="clientNameHeader">Nome usuário</h1>
+                    <div class="textBox">
+                        <div class="leftInfo">
+                            <div id="nameCel"></div>
+                            <div id="cpfCel"></div>
+                            <div id="birthdayCel"></div>
+                        </div>
+                        <div class="rightInfo">
+                            <div id="telCel"></div>
+                            <div id="celCel"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tableContainer2">
+                <div class="mainPop-up">
+                    <h3>Endereço Principal</h3>
+                    <p id="mainAdress"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tableContainer">
+            <div class="tableWrapper">
+                <div class="inputSubmit">
+                    <button class="addbutton" onclick="changeAction('ClientNewPlace')">Adicionar endereço</button>
+                </div>
+                <div class="table-scroll-container">
+                    <table class="table" id="tableAdressClient">
+                        <thead>
+                            <tr>
+                                <th colspan="100">Endereços atrelados</th>
+                            </tr>
+                            <tr>
+                                <th>Cidade</th>
+                                <th>Bairro</th>
+                                <th>Cidade</th>
+                                <th>Cep</th>
+                                <th>Estado</th>
+                                <th>Pais</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-action="ClientNewPlace" class="action">
+        <div class="menuContainer">
+            <div class="menuWrapper">
+                <form id="ClientNewPlaceForm" class="actionForm" class="menuWrapper">
+                    <h1>Endereço do cliente</h1>
+                    <!-- cep -->
+                    <label name="placeCep">Cep*</label>
+                    <div class="inputField">
+                        <input type="text" name="cep" minLength="8" maxlength="8" required>
+                    </div>
+                    <!-- rua -->
+                    <label name="placeStreet">Rua*</label>
+                    <div class="inputField">
+                        <input type="text" name="street" minLength="2" maxlength="50" required>
+                    </div>
+                    <!-- bairro -->
+                    <label name="placeBlock">Bairro*</label>
+                    <div class="inputField">
+                        <input type="text" name="block" minlength="3" maxlength="50" required>
+                    </div>
+                    <label name="placeCity">Cidade*</label>
+                    <div class="inputField">
+                        <input type="text" name="city" minlength="3" maxlength="20" required>
+                    </div>
+                    <!-- estado -->
+                    <label name="placeState">Estado(Ex:SC)*</label>
+                    <div class="inputField">
+                        <input type="text" name="state" minLength="2" maxlength="3">
+                    </div>
+                    <!-- país -->
+                    <label name="placeCountry">País</label>
+                    <div class="inputField">
+                        <input type="text" name="country" minLength="3" maxlength="20">
+                    </div>
+                    <div class="inputSubmit">
+                        <button id="submit-Button-Client" type="submit"
+                            onclick="changeAction('ClientInfo')">Adicionar</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+    </form>
+
+
+</body>
+
+</html>

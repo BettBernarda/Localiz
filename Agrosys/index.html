@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="/assets/images/favicon.png" rel="icon">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <script src="assets/js/alasql.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/Index.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/clientes.js"></script>
+
+    
+</head>
+
+<body>
+    <!-- Login -->
+    <div class="config">
+        <button data-action="Login" class="action on" title="Configurações" onclick="changeAction('Config')">
+            <img src="assets/images/config.png">
+        </button>
+        <button data-action="Register" class="action" title="Configurações" onclick="changeAction('Config')">
+            <img src="assets/images/config.png">
+        </button>
+        <!-- voltar para a tela de login -->
+        <button data-action="Config" class="action" title="Configurações" onclick="changeAction('Login')">
+            <img src="assets/images/config.png">
+        </button>
+
+    </div>
+
+    <div class="actionContainer">
+        <div class="actionWrapper">
+
+            <img class="logo" src="assets/images/logo.png">
+
+            <!-- Login -->
+            <div data-action="Login" class="action on">
+                <h1>Login</h1>
+                <form id="Login-Form" class="actionForm">
+                    <div class="inputData">
+                        <div class="inputField">
+                            <input type="text" id="user-Login" name="user" placeholder="Usuário" minLength="3"
+                                maxlength="20" required>
+                        </div>
+                        <div class="inputField">
+                            <input type="password" id="pass-Login" name="pass" placeholder="Senha" minlength="8" maxlength="20" required>
+                        </div>
+                    </div>
+
+                    <p id="register-swap">
+                        Ainda não possui um login? <a href="#" onclick="changeAction('Register')">Cadastre-se</a>
+                    </p>
+
+                    <div class="inputSubmit">
+                        <button id="submit-Button-Login" type="submit">Entrar</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Cadastro -->
+            <div data-action="Register" class="action">
+                <h1>Cadastrar</h1>
+                <form id="Register-Form" class="actionForm">
+                    <div class="inputData">
+                        <div class="inputField">
+                            <input type="text" id="user" name="user" placeholder="Usuário" minLength="3" maxlength="20"
+                                required>
+                        </div>
+                        <div class="inputField">
+                            <input type="password" id="pass" name="pass" placeholder="Senha" minlength="8" maxlength="20" required>
+                        </div>
+                    </div>
+
+                    <p id="login-swap">
+                        Já possui um login? <a href="#" onclick="changeAction('Login')">Login</a>
+                    </p>
+
+                    <div class="inputSubmit">
+                        <button id="submit-Button-Register" type="submit">Cadastrar-se</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Configurações -->
+            <div data-action="Config" class="action">
+                <h1>Configurações</h1>
+                <div class="inputSubmit">
+                        <input type="file" id="jsonFileInput" accept=".json">                
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

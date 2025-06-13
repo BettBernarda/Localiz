@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Localiz</title>
+
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <script src="assets/js/alasql.min.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/clientes.js"></script>
+  
+</head>
+
+<body>
+
+  <div class="menuContainer">
+    <button id="dbExportUser">Bd Usuários</button>
+    <button id="dbExportClient">Bd Clientes</button>
+    <button id="dbExportPlaces">Bd de Locais</button>
+  </div>
+  <!-- formulario para dados novos de clientes -->
+  <form id="Form-newClient" class="actionForm" class="menuWrapper">
+    <div data-action="newClient" class="action">
+      <div class="menuContainer">
+        <div class="menuWrapper">
+          <div class="inputData">
+            <h1>Informações do cliente</h1>
+            <!-- nome -->
+            <label name="cliName">Nome do cliente*</label>
+            <div class="inputField">
+              <input type="text" name="name" minLength="3" maxlength="20">
+            </div>
+            <!-- cpf -->
+            <label name="cliCpf">CPF (sem pontos ou "-") * </label>
+            <div class="inputField">
+              <input type="text" name="cpf" minLength="11" maxlength="11">
+            </div>
+            <!-- Nascimento -->
+            <label name="cliDate">Data de nascimento*</label>
+            <div class="inputField">
+              <input type="date" name="birthDay">
+            </div>
+            <!-- telefone -->
+            <label name="cliTel">Numero telefone</label>
+            <div class="inputField">
+              <input type="text" name="phone" minLength="11" maxlength="13">
+            </div>
+            <!-- celular -->
+            <label name="cliCel">Numero celular</label>
+            <div class="inputField">
+              <input type="text" name="cellphone" minLength="11" maxlength="13">
+            </div>
+            <!-- Botão próxima etapa -->
+            <div class="inputSubmit">
+              <button id="submit-Button-Client" onclick="changeAction('newClientPlace')">Adicionar Local -></button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //parte dois do formulário-endereço->2 formulários em 1// -->
+
+    <div data-action="newClientPlace" class="action">
+      <div class="menuContainer">
+        <div class="menuWrapper">
+          <h1>Endereço do cliente</h1>
+          <!-- cep -->
+          <label name="placeCep">Cep*</label>
+          <div class="inputField">
+            <input type="text" name="cep" minLength="8" maxlength="8" required>
+          </div>
+          <!-- rua -->
+          <label name="placeStreet">Rua*</label>
+          <div class="inputField">
+            <input type="text" name="street" minLength="2" maxlength="50" required>
+          </div>
+          <!-- bairro -->
+          <label name="placeBlock">Bairro*</label>
+          <div class="inputField">
+            <input type="text" name="block" minlength="3" maxlength="50" required>
+          </div>
+          <label name="placeCity">Cidade*</label>
+          <div class="inputField">
+            <input type="text" name="city" minlength="3" maxlength="20" required>
+          </div>
+          <!-- estado -->
+          <label name="placeState">Estado(Ex:SC)*</label>
+          <div class="inputField">
+            <input type="text" name="state" minLength="2" maxlength="3">
+          </div>
+          <!-- país -->
+          <label name="placeCountry">País</label>
+          <div class="inputField">
+            <input type="text" name="country" minLength="3" maxlength="20">
+          </div>
+          <div class="inputSubmit">
+            <button id="submit-Button-Client" type="submit" onclick="">Adicionar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+
+  <div data-action="listView" class="action on">
+
+    <div class="tableContainer">
+      <div class="tableWrapper">
+        <div class="inputSubmit">
+          <button class="addbutton" onclick="changeAction('newClient')">Adicionar Cliente</button>
+        </div>
+        <div class="table-scroll-container">
+          <table id="clientTable">
+
+            <!-- Linha de cabeçalho (thead) -->
+            <thead>
+              <tr>
+                <th colspan="100">Clientes</th>
+              </tr>
+              <tr>
+                <th>Nome</th>
+                <th>Cpf</th>
+                <th>Data de Nascimento</th>
+                <th>N° Telefone</th>
+                <th>N° Celular</th>
+                <th>N° Endereços</th>
+                <th>Editar</th>
+              </tr>
+            </thead>
+
+            <!-- Corpo da tabela (tbody) -->
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>
